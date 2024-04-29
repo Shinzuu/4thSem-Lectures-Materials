@@ -238,6 +238,11 @@ INPUT ../asset/invEXA.png
 INPUT ../asset/invEXA.png
 INPUT ../asset/invEXA.png
 INPUT ../asset/invEXA.png
+INPUT ../asset/invHWC.png
+INPUT ../asset/invHWC.png
+INPUT ../asset/invHWC.png
+INPUT ../asset/invHWC.png
+INPUT ../asset/invHWC.png
 INPUT MLD-latex.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
