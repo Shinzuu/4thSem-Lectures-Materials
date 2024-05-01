@@ -233,8 +233,147 @@ i.e., \( |A| \neq \emptyset \).]
     The equation \( |A - \lambda I| = 0\) is called the characteristic equation of \( A \).
     
     \vspace{10pt}
+    Cayley-Hamilton theorem states that every square matrix A satisfies it's characteristic equation.
 
+    \vspace{10pt}
+    \subsection*{Example:}
+        Find the eigenvalues and eigenvectors of the matrix \( A = \begin{bmatrix} 1 & 4 \\  2 & 3  \end{bmatrix} \) in the field of real numbers ( \( \mathbb{R} \) ). Also verify the Cayley-Hamilton theorem.
 
+    \vspace{20pt}
+    \textbf{\underline{\textit{Sol}}$_{\textit{n}}$}:
+
+    \vspace{10pt}
+    Given matrix, \(A = \begin{bmatrix} 1 & 4 \\  2 & 3  \end{bmatrix}\)
+    
+    \vspace{10pt}
+    Characteristic matrix of A inverse:
+
+    \[
+    \begin{aligned}
+        A - \lambda I &= 
+        \begin{bmatrix}
+            1 & 4 \\
+            2 & 3
+        \end{bmatrix}
+        - \lambda
+        \begin{bmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{bmatrix} \\
+        &= \begin{bmatrix}
+                1-\lambda & 4 \\
+                2 & 3-\lambda
+            \end{bmatrix}
+    \end{aligned}
+    \]
+    \vspace{20pt}
+
+    Characteristic equation of A inverse:
+
+    \vspace{10pt}
+    \(|A - \lambda I| = 0 \)
+
+    or,
+    \[
+    \left|
+    \begin{array}{cc}
+        1 - \lambda & 4 \\
+        2 & 3 - \lambda
+    \end{array}
+    \right| = 0
+    \]
+
+    or,
+    \((1 - \lambda)(3 - \lambda) - 8 = 0 \)
+
+    or,
+    \(3 - 4\lambda + \lambda^2 - 8 = 0 \)
+
+    or,
+    \( \lambda^2 - 4\lambda - 5 = 0 \)
+
+    or,
+    \( \lambda^2 - 5\lambda + \lambda - 5 = 0 \)
+
+    or
+    \( \lambda = 1 \) or \( \lambda = -5 \)
+
+    \vspace{10pt}
+    thus, \( \lambda = 1, -5 \); 
+
+    these are the eigenvalues of \( A \).
+
+    \newpage
+
+    For \(x = 5\), 
+
+    \[
+    \begin{aligned}
+        (A - \lambda I) v &= 0 \\
+        \text{or,} \quad &\begin{bmatrix}
+            1-5 & 4 \\
+            2 & 3-5
+        \end{bmatrix} \begin{bmatrix}
+            x_1 \\
+            x_2
+        \end{bmatrix} = 0 \\
+        \text{or,} \quad &\begin{bmatrix}
+            -4 & 4 \\
+            2 & -2
+        \end{bmatrix} \begin{bmatrix}
+            x_1 \\
+            x_2
+        \end{bmatrix} = 0
+    \end{aligned}
+    \]
+
+    Now, we can write,
+
+    \[
+    \begin{aligned}
+        -4x_1 + 4x_2 &= 0 \\
+        2x_1 - 2x_2 &= 0 \\
+        \text{or,} \quad &\begin{bmatrix}
+            -4 & 4 \\
+            2 & -2
+        \end{bmatrix} \begin{bmatrix}
+            x_1 \\
+            x_2
+        \end{bmatrix} = \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \sim \quad &\begin{bmatrix}
+            -4 & 4 \\
+            0 & 0
+        \end{bmatrix} \quad [r_2' = 2r_2 + r_1] \\
+        \sim \quad &\begin{bmatrix}
+            -1 & 1 \\
+            0 & 0
+        \end{bmatrix} \quad [r_1' = r_1 \times \frac{1}{4}]
+    \end{aligned}
+    \]
+
+    \vspace{10pt}
+    From this first row,
+
+    \[
+    \begin{aligned}
+        &-x_1 + x_2 = 0 \\
+        & x_1 = x_2 = s \quad (\text{say})
+    \end{aligned}
+    \]
+
+    Taking \(s = 1\), the eigenvector can be written as,
+
+    \[
+    v_1 = \begin{bmatrix}
+        1 \\
+        1
+    \end{bmatrix}
+    \]
+
+    
     \end{document}
 
 
