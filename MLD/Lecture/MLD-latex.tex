@@ -326,9 +326,9 @@ i.e., \( |A| \neq \emptyset \).]
         \end{bmatrix} = 0
     \end{aligned}
     \]
-
+    
     Now, we can write,
-
+    
     \[
     \begin{aligned}
         -4x_1 + 4x_2 &= 0 \\
@@ -353,27 +353,109 @@ i.e., \( |A| \neq \emptyset \).]
         \end{bmatrix} \quad [r_1' = r_1 \times \frac{1}{4}]
     \end{aligned}
     \]
-
+    
     \vspace{10pt}
     From this first row,
-
+    
     \[
     \begin{aligned}
-        &-x_1 + x_2 = 0 \\
-        & x_1 = x_2 = s \quad (\text{say})
+        -x_1 + x_2 &= 0 \\
+        x_1 &= x_2 = s \quad (\text{say})
     \end{aligned}
     \]
-
+    
     Taking \(s = 1\), the eigenvector can be written as,
-
+    
     \[
     v_1 = \begin{bmatrix}
         1 \\
         1
     \end{bmatrix}
     \]
-
     
-    \end{document}
+    Now for \(\lambda = -1\),
+    
+    \[
+    \begin{aligned}
+        (A - \lambda I) v &= 0 \\
+        \text{or,} \quad &\begin{bmatrix}
+            1-(-1) & 4 \\
+            2 & 3-(-1)
+        \end{bmatrix} \begin{bmatrix}
+            x_1 \\
+            x_2
+        \end{bmatrix} = 0 \\
+        \text{or,} \quad &\begin{bmatrix}
+            2 & 4 \\
+            2 & 4
+        \end{bmatrix} \begin{bmatrix}
+            x_1 \\
+            x_2
+        \end{bmatrix} = 0
+    \end{aligned}
+    \]
+    
+    \newpage
+    Now, we can write,
+    
+    \[
+    \begin{aligned}
+        &2x_1 + 4x_2 = 0 \\
+        &2x_1 + 4x_2 = 0 \\
+        \text{or,} \quad &\begin{bmatrix}
+            2 & 4 \\
+            2 & 4
+        \end{bmatrix} \begin{bmatrix}
+            x_1 \\
+            x_2
+        \end{bmatrix} = \begin{bmatrix}
+            0 \\
+            0
+        \end{bmatrix} \\
+        \sim \quad &\begin{bmatrix}
+            2 & 4 \\
+            0 & 0
+        \end{bmatrix} \quad [r_2' = r_2 - r_1] \\
+        \sim \quad &\begin{bmatrix}
+            1 & 2 \\
+            0 & 0
+        \end{bmatrix} \quad [r_1' = r_1 \times \frac{1}{2}]
+    \end{aligned}
+    \]
+    
+    \vspace{10pt}
+    From this first row,
+    
+    \[
+    \begin{aligned}
+        & x_1 + 2x_2 = 0 \\
+        & x_1 = -2x_2
+    \end{aligned}
+    \]
+    
+    Taking \(x_2 = 1\), we get \(x_1 = -2\). Thus, the eigenvector can be written as,
+    
+    \[
+    v_2 = \begin{bmatrix}
+        -2 \\
+        1
+    \end{bmatrix}
+    \]
+    
+    \subsection*{Cayley-Hamilton proof: }
+    We have to show that \( A^2 - 4A - 5 = 0 \).
+
+    \[
+    \left| \text{Det}(A) \right| = \left| \text{Det}\left( \begin{bmatrix} 1 & 4 \\ 2 & 3 \end{bmatrix} \right) \right|
+    = |(1 \times 3) - (4 \times 2)| = |3 - 8| = 5
+    \]
+    
+    Thus, 
+    \[
+    \text{Left side} = A^2 - 4A - 5 = 5^2 - 4 \times 5 - 5 = 25 - 20 - 5 = 0 = \text{Right side} \quad [\text{Proofed}]
+    \]
+    
+
+\end{document}
 
 
