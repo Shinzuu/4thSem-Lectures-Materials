@@ -1,11 +1,11 @@
 # Fdb version 3
-["pdflatex"] 1714534092 "/home/shinzuu/Documents/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" "MLD-latex.pdf" "MLD-latex" 1714534093
+["pdflatex"] 1714534799 "/home/shinzuu/Documents/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" "MLD-latex.pdf" "MLD-latex" 1714534799
   "../asset/invEXA.png" 1714235922 72836 93029c283c3f79fd485cb6f956783213 ""
   "../asset/invHWB.png" 1714533993 50139 59daef92d40e07186bb406c097e62a7a ""
   "../asset/invHWC.png" 1714238373 71741 d0d713a34c17edbb1be56e74f0b3a25f ""
   "../asset/rankOfExc.png" 1713967931 86181 546f472d18eecd22647d3d971d9cac9d ""
   "/etc/texmf/web2c/texmf.cnf" 1713401235 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/shinzuu/Documents/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" 1714534092 7440 267220500892c4606e73cd633040a329 ""
+  "/home/shinzuu/Documents/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" 1714534799 7920 b03ee3cd476a51e46dd642df65226f5e ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -64,8 +64,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713401239 75955 f78456fd1308dc295dc476a68e28d85b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713401241 1405649 dd4284646a5ce79fddded0900179bf1a ""
-  "MLD-latex.aux" 1714534092 542 fc2e3f8ba32eef741ce29009a7ce78e6 "pdflatex"
-  "MLD-latex.tex" 1714534092 7440 267220500892c4606e73cd633040a329 ""
+  "MLD-latex.aux" 1714534799 542 053e69e7749497febdb8c0235fa4e3e4 "pdflatex"
+  "MLD-latex.tex" 1714534799 7920 b03ee3cd476a51e46dd642df65226f5e ""
   (generated)
   "MLD-latex.aux"
   "MLD-latex.log"
