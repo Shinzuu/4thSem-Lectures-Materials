@@ -31,8 +31,9 @@ Properties of Algorithm:
 
 \section*{Time and Space Complexity}
 
-\textbf{Example: }
+\textbf{Examples: }
 
+\hrulefill
 \begin{multicols}{3}
     \begin{minipage}{\linewidth}
         \section*{}
@@ -58,6 +59,9 @@ for(i = 0; i < n; i++){
        1+1+1    1+(n+1)+n     2n+2
        1+1+1  (1+(n+1)+n)+n  2n^2+2n
          1         n^2         n^2
+
+        F(n)= 3n^2 + 3n + 1
+        TC -> O(n^2)
         \end{verbatim}
     \end{minipage}
     
@@ -70,8 +74,59 @@ for(i = 0; i < n; i++){
             i= 4     1     4
             j= 4     1     4
             n= 4     1     4
+            
+
+            S(n)= 12
+            SC -> O(1)
         \end{verbatim}
     \end{minipage}
 \end{multicols}
+
+\newpage
+\hrulefill
+    \begin{verbatim}
+    Algorithm:
+
+    int i, j, n, A[i][j], B[i][j], C[i][j];
+    for(i = 0; i < n; i++){
+        for(j = 0; j < n; j++)
+            C[i][j] = A[i][j] + B[i][j];
+    }
+    
+    space complexity                    Space complexity
+
+    cost      repeat       total         cost  repeat  total
+      1          1           1           i=4     1       4
+    1+1+1    1+(n+1)+n      2n+2         j=4     1       4
+    1+1+1   n+n(n+1)+n^2   2n^2+2n       n=4     1       4
+      1         n^2         n^2         A[][]   4*n*n   4n^2
+                                        B[][]   4*n*n   4n^2
+                                        C[][]   4*n*n   4n^2
+
+    F(n)= 3n^2 + 4n + 3                 S(n)= 12n^2 + 12
+     TC -> O(n^2)                        SC -> O(n^2)
+\end{verbatim}
+
+\hrulefill
+\begin{verbatim}
+    Algorithm:
+
+    int i, n;
+    for(i = 0; i < n; i++)
+        printf(" \%d ", 2*i);
+    
+    space complexity                    Space complexity
+
+    cost        repeat      total         cost  repeat  total
+      1           1           1           i=4     1       4
+    1+1+1  1+(n/2)+1+(n/2)   n+2          n=4     1       4
+      1          n/2         n/2         
+
+    F(n)= (3n/2) + 3                    S(n)= 8
+     TC -> O(n)                          SC -> O(1)
+\end{verbatim}
+
+\hrulefill
+
 
 \end{document}
