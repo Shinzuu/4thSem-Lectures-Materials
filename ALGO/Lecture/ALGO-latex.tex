@@ -126,7 +126,30 @@ for(i = 0; i < n; i++){
      TC -> O(n)                          SC -> O(1)
 \end{verbatim}
 
+\newpage
 \hrulefill
+\begin{verbatim}
+    Algorithm:
+
+    int p=0, i, n;
+    for(i = 1; i <= p; i++)
+        p+=1;
+
+    Step analysis:
+    i       p
+    0      0+1
+    1     0+1+2
+    2    0+1+2+3
+    3   0+1+2+3+4
+    .       .
+    .       .
+    .       .
+    k 0+1+2+3+4+...+k = k*(k+1)/2
+
+    assume , p>n where step number is k and p = k*(k+1)/2
+            
+\end{verbatim}
+
 
 
 \end{document}
