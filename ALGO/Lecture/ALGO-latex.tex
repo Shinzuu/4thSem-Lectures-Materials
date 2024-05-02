@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{geometry}
+\usepackage{multicol}
 
 \title{Algorithms \\ CSE 2415}
 \author{Md. Hasan}
@@ -29,5 +30,48 @@ Properties of Algorithm:
 \end{itemize}
 
 \section*{Time and Space Complexity}
+
+\textbf{Example: }
+
+\begin{multicols}{3}
+    \begin{minipage}{\linewidth}
+        \section*{}
+        % Your content for section 1 goes here
+        \begin{verbatim}
+Algorithm:
+
+int i, j;
+for(i = 0; i < n; i++){
+    for(j = 0; j < n; j++)
+        printf(" \%d ", i+j);
+}
+        \end{verbatim}
+    \end{minipage}
+    
+    \begin{minipage}{\linewidth}
+        \section*{}
+        % Your content for section 2 goes here
+        \begin{verbatim}
+        space complexity
+        cost      repeat      total
+         1          1           1
+       1+1+1    1+(n+1)+n     2n+2
+       1+1+1  (1+(n+1)+n)+n  2n^2+2n
+         1         n^2         n^2
+        \end{verbatim}
+    \end{minipage}
+    
+    \begin{minipage}{\linewidth}
+        \section*{}
+        % Your content for section 3 goes here
+        \begin{verbatim}
+            Space complexity
+            cost  repeat  total
+            i= 4     1     4
+            j= 4     1     4
+            n= 4     1     4
+        \end{verbatim}
+    \end{minipage}
+\end{multicols}
 
 \end{document}
