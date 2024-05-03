@@ -242,5 +242,32 @@ for(i = 0; i < n; i++){
 
 \subsection*{Recursion:}
 
+Substitution method:
+\begin{verbatim}
+    -> It solves all types of recursive problems
+    -> It always gives right answers
+    -> Takes more time then Master method
+\end{verbatim}
+
+Master method:
+\begin{verbatim}
+    -> It solves Specific types of recursive problems
+    -> Format: T(n) = aT(n/b) + f(n) ; where a >= 1 and b > 1
+
+    Different cases:
+        1. f(n) < n log_b a ; 
+            T(n) = (theta) (n log_b a)
+
+        2. f(n) = n log_b a ; 
+            T(n) = (theta) (n log_b a . log n)
+
+        3. f(n) > n log_b a ; 
+            T(n) = (theta) (f(n))
+\end{verbatim}
+\hrulefill
+\newpage
+
+\textbf{Examples:}
+
 
 \end{document}
