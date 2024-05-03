@@ -64,6 +64,7 @@ for(i = 0; i < n; i++){
         TC -> O(n^2)
         \end{verbatim}
     \end{minipage}
+
     
     \begin{minipage}{\linewidth}
         \section*{}
@@ -147,9 +148,72 @@ for(i = 0; i < n; i++){
     k 0+1+2+3+4+...+k = k*(k+1)/2
 
     assume , p>n where step number is k and p = k*(k+1)/2
-            
+            k(k+1)/2 = n
+         => k(k+1) = 2n
+         => k^2 + k - 2n = 0
+         => k^2 = 2n [ removed k as k^2 > k ]
+         => k = sqrt(2n)
+         => k = sqrt(2) * sqrt(n)
+
+    thus O(sqrt(n))
+\end{verbatim}
+\hrulefill
+\begin{verbatim}
+    int i, n;
+    for(i =1; i<n; i*=2)
+        printf("%d", i);
+
+    Step Analysis:
+    
+    steps       2*i
+     1           1
+     2           2
+     .           .
+     .           .
+     .           .
+     k           2^k        [actual value is 2^(k-1)]
+     
+\end{verbatim}
+\newpage
+\begin{verbatim}
+    assume, code stopped at step k where , i  2^k
+        2^k > n
+      =>2^k = n
+      =>log 2^k = log n
+      =>k = log n  [log 2 ^ x = x , here base is always 2 causo fo binary ]
+
+      -> O(log n)
 \end{verbatim}
 
+\hrulefill
+\begin{verbatim}
+    int i, n;
+    for(i =1; i > n; i/=2)
+        printf("%d", i);
 
+    Step Analysis:
+    
+    steps       i/2
+     1           n
+     2          n/2
+     .           .
+     .           .
+     .           .
+     k          n/2^k  
 
+     n/2^k < 1
+   =>2^k < n
+   =>2^k = n
+   =>log 2^k = log n
+   => k = log n
+\end{verbatim}
+\hrulefill
+\begin{verbatim}
+    int p=0, i;
+    for(i =0; i<n; i*=2)
+        p++;              ------> O(log n)
+    for(i=p; i>1; i/=2)     '---> p = log n
+        printf("%d", i);    '---> O(log log n)
+\end{verbatim}
+\hrulefill
 \end{document}
