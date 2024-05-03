@@ -188,7 +188,7 @@ for(i = 0; i < n; i++){
 \hrulefill
 \begin{verbatim}
     int i, n;
-    for(i =1; i > n; i/=2)
+    for(i =n; i > 1 ; i/=2)
         printf("%d", i);
 
     Step Analysis:
@@ -216,4 +216,31 @@ for(i = 0; i < n; i++){
         printf("%d", i);    '---> O(log log n)
 \end{verbatim}
 \hrulefill
+\newpage
+\hrulefill
+\begin{verbatim}
+                Time Complexity Cheat Sheet
+                
+    Constant TC   - O(1)         -> for( i=0; i<k; i++ )
+                  - O(sqrt(n))   -> for( i=0; p<n; i++ )
+
+    Linear TC     - O(n)         -> for( i=1; i<n; i++ )
+                                 -> for( i=0; i<n; i+=2)
+                                 -> for( i=n; i>n; i-=5)
+
+    Logarithm TC  - O(log n)     -> for( i=0; i<n; i*=2)
+                                 -> for( i=n; i>1; i/=2)
+                  - O(log_a n)   -> for( i=1; i<n; i*=a)
+
+    Polynomial TC - O(n^2)       -> for(--) for(--)
+                  - O(n^3)       -> for(--) for(--) for(--)
+
+    Exponential TC- O(2^n),O(n^n)-> Any recursive function
+ 
+\end{verbatim}
+\hrulefill
+
+\subsection*{Recursion:}
+
+
 \end{document}
