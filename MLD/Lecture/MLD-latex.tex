@@ -442,10 +442,38 @@ i.e., \( |A| \neq \emptyset \).]
     \end{bmatrix}
     \]
     
-    \subsection*{Cayley-Hamilton proof: }
+    \subsection*{Cayley-Hamilton proof:}
     We have to show that \( A^2 - 4A - 5I = 0 \).
 
-    
+
+    This will square the matrix \( A \), which is:
+
+    \[ A^2 = \begin{bmatrix}
+        1 & 4 \\
+        2 & 3
+    \end{bmatrix} \times \begin{bmatrix}
+        1 & 4 \\
+        2 & 3
+    \end{bmatrix} = \begin{bmatrix}
+        9 & 16 \\
+        8 & 17
+    \end{bmatrix} \]
+
+    Now, \( A^2 - 4A - 5I = \begin{bmatrix}
+        9 & 16 \\
+        8 & 17
+    \end{bmatrix} - \begin{bmatrix}
+        4 & 16 \\
+        8 & 12
+    \end{bmatrix} - \begin{bmatrix}
+        5 & 0 \\
+        0 & 5
+    \end{bmatrix} = \begin{bmatrix}
+        0 & 0 \\
+        0 & 0
+    \end{bmatrix} \)
+    = 0
+    [Proved]
 
 \end{document}
 
