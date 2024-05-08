@@ -730,6 +730,102 @@ and \( V_2 = \begin{bmatrix}
     1 \\
 \end{bmatrix} \)
 
+$\delta$ Find the eigenvalues and eigenvectors of \(A = \begin{bmatrix} 3 & 2 & 4 \\ 2 & 0 & 2 \\ 4 & 2 & 3 \end{bmatrix}\)
+\newpage
+\section*{System of Equation}
+
+\begin{align*}
+    &a_{11}x_1 + &&a_{12}x_2 + &&a_{13}x_3 &= b_1 \\
+    &a_{21}x_1 + &&a_{22}x_2 + &&a_{23}x_3 &= b_2 \\
+    &\vdots &&\vdots &&\vdots &\vdots \\
+    &a_{n1}x_1 + &&a_{n2}x_2 + &&a_{n3}x_3 &= b_n
+\end{align*}
+
+or, 
+\begin{align*}
+    \begin{bmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        \vdots & \vdots & \vdots \\
+        a_{n1} & a_{n2} & a_{n3}
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3 \\
+    \end{bmatrix}
+    = \begin{bmatrix}
+        b_1 \\
+        b_2 \\
+        \vdots \\
+        b_n
+    \end{bmatrix}
+\end{align*}
+
+Here, \[AX = B\]
+
+Let, \[C = [A|B]\]
+
+Then,for finding solution of we look for:
+
+\begin{align*}
+    &(a) \text{ Consistent } \text{eq}^n: \\
+    &\quad \text{If } \text{Rank} \, A = \text{Rank} \, C \\
+    &\quad \quad (i) \text{ Unique } \text{sol}^n: \quad \text{Rank} \, A = \text{Rank} \, C = n ; \\
+    &\quad \quad (ii) \text{ Infinite } \text{sol}^n: \quad \text{Rank} \, A = \text{Rank} \, C = n < r ; \\
+    &(b) \text{ Inconsistent } \text{eq}^n: \\
+    &\quad \text{If } \text{Rank} \, A \neq \text{Rank} \, C         
+\end{align*}
+
+
+\textbf{Example:}
+
+Test for consistency and solve:
+
+\[
+\begin{cases}
+5x+3y+7z &= 4, \\
+3x+26y+2z &= 9, \\
+7x+2y+10z &= 5.
+\end{cases}
+\]
+
+\textbf{Solution:}
+
+\begin{align*}
+    C=\left[\begin{array}{ccc|c}
+    5 & 3 & 7 & 4 \\
+    3 & 26 & 2 & 9 \\
+    7 & 2 & 10 & 5
+    \end{array}\right]
+\end{align*}
+    
+\begin{align*}
+    \sim\left[\begin{array}{ccc|c}
+    5 & 3 & 7 & 4 \\
+    0 & 121 & -11 & 33 \\
+    0 & -11 & 1 & -3
+    \end{array}\right]
+    \begin{bmatrix}
+        r_2' = 5r_2 - 3r_1  \\ r_3' = 5r_3 - 7r_1
+    \end{bmatrix}
+\end{align*}
+
+\begin{align*}
+    \sim\left[\begin{array}{ccc|c}
+    5 & 3 & 7 & 4 \\
+    0 & 121 & -11 & 33 \\
+    0 & 0 & 0 & 0
+    \end{array}\right]
+    \begin{bmatrix}
+        r_3'' = 11r_3' + r_2' 
+    \end{bmatrix}
+\end{align*}
+
+Here, the n = 3; Rank of A = 2; Rank of C = 2;
+
+Thus it is a consistent equation with infinite amount of solutions.
+
 \end{document}
 
 
