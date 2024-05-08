@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1715059599.33235 "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" "MLD-latex.pdf" "MLD-latex" 1715059599.97882 0
+["pdflatex"] 1715158289.59283 "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" "MLD-latex.pdf" "MLD-latex" 1715158290.05813 0
   "../Asset/invEXA.png" 1714640511.03908 72836 93029c283c3f79fd485cb6f956783213 ""
   "../Asset/invHWB.png" 1714640511.04008 50139 59daef92d40e07186bb406c097e62a7a ""
   "../Asset/invHWC.png" 1714640511.04208 71741 d0d713a34c17edbb1be56e74f0b3a25f ""
   "../Asset/rankOfExc.png" 1714640511.04508 86181 546f472d18eecd22647d3d971d9cac9d ""
-  "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" 1715059599.05983 13153 6e8e42c7c05daec9d676a9a15dbb81cc ""
+  "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MLD/Lecture/MLD-latex.tex" 1715158289.35924 14505 6975f41b4adb987342d4f2aa1adeea13 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -67,8 +67,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1706659200 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1714712600.96618 284220 1854b4a2d41da6477c3a764c32f15146 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1714714823 6446972 e33aeef3c8cc54dfe1bf4f90dc238553 ""
-  "MLD-latex.aux" 1715059599.90184 543 00cf9648e1d981a2b3390e8630674e1b "pdflatex"
-  "MLD-latex.tex" 1715059599.05983 13153 6e8e42c7c05daec9d676a9a15dbb81cc ""
+  "MLD-latex.aux" 1715158290.00625 543 38ca543c466e086a01d4dde9b84f4277 "pdflatex"
+  "MLD-latex.tex" 1715158289.35924 14505 6975f41b4adb987342d4f2aa1adeea13 ""
   (generated)
   "MLD-latex.aux"
   "MLD-latex.log"
