@@ -544,9 +544,191 @@ To solve a cube polynomial, we assume a value for the variable where the left si
 
 \newpage
 
+$\lambda$ could be either -2 or 4
+% section A
+For $\lambda$ = -2 , we get from (A-$\lambda$I)v = 0:
 
+\begin{align*}
+    &\text{or,} \quad 
+    \begin{bmatrix}
+        1+2 & -3 & 3 \\
+        3 & -5+2 & 3  \\
+        6 & -6 & 4+2\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        x_3\\
+    \end{bmatrix}
+    = 0 \\
+    &\text{or,} \quad 
+    \begin{bmatrix}
+        3 & -3 & 3 \\
+        3 & -3 & 3  \\
+        6 & -6 & 6\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        x_3\\
+    \end{bmatrix}
+    = 0 \\
+    &\text{} \quad 
+    \sim\begin{bmatrix}
+        3 & -3 & 3 |0\\
+        0 & 0 & 0  |0\\
+        0 & 0 & 0  |0\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        r_2' = r_2 - r_1\\
+        x_3' = r_3 - 2r_1\\
+    \end{bmatrix}
+    = 0
+\end{align*}
 
+From the first row , we get : 
 
+\[ 3x_1 - 3x_2 + 3x_3 = 0 \]
+\[or, x_1 - x_2 + x_3 = 0 \]
+\[or, x_1 = x_2 - x_3 \]
+\[or, x_1 = a - b \] 
+
+\begin{align*}
+    \text{say, } \quad & \begin{aligned}[t]
+        x_2 &= a &
+        x_3 &= b
+    \end{aligned}
+\end{align*}
+
+\begin{align*}
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3 \\
+    \end{bmatrix}
+    = \begin{bmatrix}
+        a-b \\
+        a\\
+        b\\\\
+    \end{bmatrix}
+    = a\begin{bmatrix}
+        1 \\
+        1\\
+        0\\
+    \end{bmatrix}
+    - b\begin{bmatrix}
+        1 \\
+        0\\
+        1\\
+    \end{bmatrix}
+\end{align*}
+
+Thus, we get $V_1 = 
+\begin{bmatrix}
+    1\\
+    1\\
+    0
+\end{bmatrix}$
+and $V_2 = \begin{bmatrix}
+    1\\ 
+    0\\ 
+    1
+\end{bmatrix}$
+
+\newpage
+% section B
+For $\lambda = 4$, we get from $(A-\lambda I)v = 0$:
+
+\begin{align*}
+    &\text{or,} \quad 
+    \begin{bmatrix}
+        1-4 & -3 & 3 \\
+        3 & -5-4 & 3  \\
+        6 & -6 & 4-4\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        x_3\\
+    \end{bmatrix}
+    = 0 \\
+    &\text{or,} \quad 
+    \begin{bmatrix}
+        -3 & -3 & 3 \\
+        3 & -9 & 3  \\
+        6 & -6 & 0\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_1\\
+        x_2\\
+        x_3\\
+    \end{bmatrix}
+    = 0 \\
+    &\text{} \quad 
+    \sim\begin{bmatrix}
+        -3 & -3 & 3 |0\\
+        0 & -6 & 0  |0\\
+        0 & 0 & 0  |0\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        r_2' = r_2 + r_1\\
+        r_3' = r_3 - 2r_1\\
+    \end{bmatrix}
+    = 0
+\end{align*}
+
+From the second row, we get:
+
+\[ -6x_2 = 0 \]
+
+So, \( x_2 = 0 \).
+
+Now, from the first row:
+
+\[ -3x_1 - 3x_2 + 3x_3 = 0 \]
+
+\[ -3x_1 + 3x_3 = 0 \]
+
+\[ x_1 = x_3 \]
+
+\[ x_1 = c \]
+
+\begin{align*}
+    \text{say, } \quad & \begin{aligned}[t]
+        x_1 &= c &
+        x_2 &= 0
+    \end{aligned}
+\end{align*}
+
+\begin{align*}
+    \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3 \\
+    \end{bmatrix}
+    &= \begin{bmatrix}
+        c \\
+        0 \\
+        c \\
+    \end{bmatrix}
+    = c\begin{bmatrix}
+        1 \\
+        0 \\
+        1 \\
+    \end{bmatrix}
+\end{align*}
+
+Thus, we get \( V_1 = 
+\begin{bmatrix}
+    1 \\
+    0 \\
+    1 \\
+\end{bmatrix} \)
+and \( V_2 = \begin{bmatrix}
+    1 \\ 
+    0 \\ 
+    1 \\
+\end{bmatrix} \)
 
 \end{document}
 
