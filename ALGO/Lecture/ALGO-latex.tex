@@ -4,6 +4,8 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{multicol}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
 \title{Algorithms \\ CSE 2415}
 \author{Md. Hasan}
@@ -526,7 +528,59 @@ Since, b is not greater then a, we cant use master method to find the complexity
 \hrulefill
 \newpage
 
+\section*{Divide And Conquer Method:}
 
+\textbf{3 step to solve level of problem:}
+
+\begin{verbatim}
+    1. Divide:
+                Divide the problem into problems into a number of subproblems that are
+            similar to the problem.
+    2. Conquer:
+                Conquer the subproblems by solving them recursively. If the subproblem's
+            size is small enough, just solve it in straight forward manner.
+    3. Combine:
+                Combine the solutions of the subproblems to get the solution of the
+            original problem.
+
+Example:
+    For MergeSort it works as follows:
+        1. Divide the n-element array into two n/2 elements to Sort.
+        2. Sort the two subsequences recursively using MergeSort.
+        3. Merge the two sorted subsequences.
+\end{verbatim}
+\hrulefill
+
+\section*{Time Complexity function Comparison:}
+\subsection*{Big O cheat sheet}
+TC class :
+\[1 < \log n < \sqrt{n} < n < n \log n < n^2 < n^3 < \ldots < 2^n < 3^n < \ldots < n^n\]
+
+\begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[
+        title={Operation vs Element Graph},
+        xlabel={Elements},
+        ylabel={Operations},
+        xmin=0, xmax=10,
+        ymin=0, ymax=100,
+        xtick={0,1,2,3,4,5,6,7,8,9,10},
+        ytick={0,20,40,60,80,100},
+        legend pos=north west,
+        grid style=dashed,
+    ]
+    
+    \addplot[
+        color=blue,
+        mark=square,
+        ]
+        coordinates {
+        (1,1)(2,4)(3,9)(4,16)(5,25)(6,36)(7,49)(8,64)(9,81)(10,100)
+        };
+        
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
 
 
 \end{document}
