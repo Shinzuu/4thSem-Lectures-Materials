@@ -323,6 +323,115 @@ Here, \( n^2 \) is the time complexity. Thus, the answer is \( O(n^2) \).
 
 \newpage
 
+$EQ^n:$
+\[
+    T(n) = 
+    \begin{cases}
+        t(n/2) + c & \text{, } n > 1 \\
+        1 & \text{, } n \leq 1
+    \end{cases}
+\]
+
+$Sol^n:$
+We have,
+\begin{equation}
+    T(n) = t\left(\frac{n}{2}\right) + c \quad \text{---(1)}
+\end{equation}
+
+Replace \( n \) by \( n/2 \) in equation (1):
+\begin{equation}
+    T\left(\frac{n}{2}\right) = t\left(\frac{n}{4}\right) + c \quad \text{---(2)}
+\end{equation}
+
+Putting equation (2) in equation (1) we get,
+\begin{equation}
+    T(n) = t\left(\frac{n}{4}\right) + c + c \quad \text{---(3)}
+\end{equation}
+
+Similarly, replacing \( n \) by \( n/4 \) in equation (1) we get,
+\begin{equation}
+    T\left(\frac{n}{4}\right) = t\left(\frac{n}{8}\right) + c \quad \text{---(4)}
+\end{equation}
+
+Putting equation (4) in equation (3) we get,
+\begin{equation}
+    T(n) = t\left(\frac{n}{8}\right) + c + c + c \quad \text{---(5)}
+\end{equation}
+
+So, the general equation may be,
+\begin{equation}
+    T(n) = t\left(\frac{n}{2^k}\right) + kc \quad \text{---(6)}
+\end{equation}
+
+Assume that in the \( k \)-th step, \( \frac{n}{2^k} = 1 \)
+\begin{align*}
+    & \Rightarrow \frac{n}{2^k} = 1 \\
+    & \Rightarrow n = 2^k \\
+    & \Rightarrow \log n = \log 2^k \\
+    & \Rightarrow k = \log n
+\end{align*}
+
+Using the value of \( k \) in equation (1), we get,
+\begin{equation}
+    T(n) = t(1) + kc = 1 + (\log n) \cdot c
+\end{equation}
+
+Here, \( t(1) \) is the base case complexity. Thus, the answer is \( O(\log n) \).
+
+\hrulefill
+\newpage
+
+$EQ^n:$
+\[
+    T(n) = 
+    \begin{cases}
+        2t(n/2) + n & \text{, } n > 1 \\
+        1 & \text{, } n = 1
+    \end{cases}
+\]
+
+$Sol^n:$
+
+We have,
+\begin{equation}
+    T(n) = 2T\left(\frac{n}{2}\right) + n \quad \text{---(1)}
+\end{equation}
+
+Replace \( n \) by \( n/2 \) in equation (1):
+\begin{equation}
+    T\left(\frac{n}{2}\right) = 2T\left(\frac{n}{4}\right) + \frac{n}{2} \quad \text{---(2)}
+\end{equation}
+
+Putting equation (2) in equation (1) we get,
+\begin{equation}
+    T(n) = 2\left(2T\left(\frac{n}{4}\right) + \frac{n}{2}\right) + n \quad \text{---(3)}
+\end{equation}
+
+Similarly, replacing \( n \) by \( n/4 \) in equation (1) we get,
+\begin{equation}
+    T\left(\frac{n}{4}\right) = 2T\left(\frac{n}{8}\right) + \frac{n}{4} \quad \text{---(4)}
+\end{equation}
+
+Putting equation (4) in equation (3) we get,
+\begin{equation}
+    T(n) = 2\left(2\left(2T\left(\frac{n}{8}\right) + \frac{n}{4}\right) + \frac{n}{2}\right) + n \quad \text{---(5)}
+\end{equation}
+
+So, the general equation may be,
+\begin{equation}
+    T(n) = 2^kT\left(\frac{n}{2^k}\right) + \left(1 + 2 + 4 + \ldots + 2^{k-1}\right)n \quad \text{---(6)}
+\end{equation}
+
+Given \( T(1) = 1 \),
+\begin{align*}
+    T(n) & = 2^kT(1) + \left(1 + 2 + 4 + \ldots + 2^{k-1}\right)n \\
+         & = 2^k + (2^k - 1)n \\
+         & = 2^kn - n + n \\
+         & = 2^kn
+\end{align*}
+
+Here, \( 2^k \) is the number of times we can halve \( n \) until it reaches 1, i.e., \( n = 2^k \), so \( k = \log_2 n \). Thus, the answer is \( O(n \log n) \).
+
 
 
 \end{document}
