@@ -394,44 +394,54 @@ $Sol^n:$
 
 We have,
 \begin{equation}
-    T(n) = 2T\left(\frac{n}{2}\right) + n \quad \text{---(1)}
+    T(n) = 2t\left(\frac{n}{2}\right) + n \quad \text{---(1)}
 \end{equation}
 
 Replace \( n \) by \( n/2 \) in equation (1):
 \begin{equation}
-    T\left(\frac{n}{2}\right) = 2T\left(\frac{n}{4}\right) + \frac{n}{2} \quad \text{---(2)}
+    T\left(\frac{n}{2}\right) = 2t\left(\frac{n}{4}\right) + \frac{n}{2} \quad \text{---(2)}
 \end{equation}
 
 Putting equation (2) in equation (1) we get,
 \begin{equation}
-    T(n) = 2\left(2T\left(\frac{n}{4}\right) + \frac{n}{2}\right) + n \quad \text{---(3)}
+    T(n) = 2\left(2t\left(\frac{n}{4}\right) + \frac{n}{2}\right) + n
+\end{equation}
+\begin{equation}
+    T(n) = 4t\left(\frac{n}{4}\right) + 2n \quad \text{---(3)}
 \end{equation}
 
 Similarly, replacing \( n \) by \( n/4 \) in equation (1) we get,
 \begin{equation}
-    T\left(\frac{n}{4}\right) = 2T\left(\frac{n}{8}\right) + \frac{n}{4} \quad \text{---(4)}
+    T\left(\frac{n}{4}\right) = 2t\left(\frac{n}{8}\right) + \frac{n}{4} \quad \text{---(4)}
 \end{equation}
 
 Putting equation (4) in equation (3) we get,
 \begin{equation}
-    T(n) = 2\left(2\left(2T\left(\frac{n}{8}\right) + \frac{n}{4}\right) + \frac{n}{2}\right) + n \quad \text{---(5)}
+T(n) = 4(2t\left(\frac{n}{8}\right) + \frac{n}{4}) + 2n
 \end{equation}
+
+\begin{equation}
+    T(n) = 8t\left(\frac{n}{8}\right) + 3n \quad \text{---(5)}
+\end{equation}
+
 
 So, the general equation may be,
 \begin{equation}
-    T(n) = 2^kT\left(\frac{n}{2^k}\right) + \left(1 + 2 + 4 + \ldots + 2^{k-1}\right)n \quad \text{---(6)}
+    T(n) = 2^k t\left(\frac{n}{2^k}\right) + kn \quad \text{---(6)}
 \end{equation}
-
 Given \( T(1) = 1 \),
 \begin{align*}
-    T(n) & = 2^kT(1) + \left(1 + 2 + 4 + \ldots + 2^{k-1}\right)n \\
-         & = 2^k + (2^k - 1)n \\
-         & = 2^kn - n + n \\
-         & = 2^kn
+    T(n) & = 2^k T\left(\frac{n}{2^k}\right) + kn \\\text{we get , }
+    n & = 2^k && \text{---(a)} \\
+    \log n & = \log 2^k \\
+    \text{or, } k & = \log n && \text{---(b)} \\
+    \text{Since } n = 2^k, \text{ we have } k = \log n \\
+    \text{thus, } T(n) & = nT\left(\frac{n}{n}\right) + n \log n && \text{[using equations (a) and (b)]} \\
+    T(n) & = n + n\log n\\
+\text{thus, we get }    TC &= O(n \log n)
 \end{align*}
-
-Here, \( 2^k \) is the number of times we can halve \( n \) until it reaches 1, i.e., \( n = 2^k \), so \( k = \log_2 n \). Thus, the answer is \( O(n \log n) \).
-
+\hrulefill
+\newpage
 
 
 \end{document}
