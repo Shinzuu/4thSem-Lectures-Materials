@@ -442,6 +442,91 @@ Given \( T(1) = 1 \),
 \end{align*}
 \hrulefill
 \newpage
+\textbf{Master Method Examples:}
+\vspace*{10pt}
+
+$EQ^n:$
+\[
+    T(n) = 
+    \begin{cases}
+        2t\left(\frac{n}{2}\right) + n & \text{, } n > 1 \\
+        1 & \text{, } n = 1
+    \end{cases}
+\]
+
+$Sol^n:$
+
+\[
+    a = 2, \quad b = 2, \quad f(n) = n
+\]
+\[
+    n^{\log_b a} = n^{\log_2 2} = n^1 = n
+\]
+
+\[
+    f(n) = n^{\log_b a}
+\]
+
+\begin{align*}
+    TC &= \theta (n^{\log_2 2} \cdot \log n) \\
+       &= \theta (n \cdot \log n) 
+\end{align*}
+
+\hrulefill
+\vspace*{10pt}
+
+
+$EQ^n:$
+\[
+    T(n) = 
+    \begin{cases}
+        T\left(\frac{n}{2}\right) + c & \text{, } n > 1 \\
+        1 & \text{, } n \leq 1
+    \end{cases}
+\]
+
+$Sol^n:$
+
+\[
+    a = 1, \quad b = 2, \quad f(n) = c
+\]
+\[
+    n^{\log_b a} = n^{\log_2 1} = n^0 = 1
+\]
+
+\[
+    f(n) = n^{\log_b a}
+\]
+
+\begin{align*}
+    TC &= \theta (n^{\log_2 1} \cdot \log n) \\
+       &= \theta (1 \cdot \log n)\\
+       &= \theta (\log n)
+\end{align*}
+
+\hrulefill
+\vspace*{10pt}
+
+$EQ^n:$
+\[
+    T(n) = 
+    \begin{cases}
+        T\left({n-1}\right) + n & \text{, } n > 1 \\
+        1 & \text{, } n \leq 1
+    \end{cases}
+\]
+
+$Sol^n:$
+\[
+    a = 1, \quad b = 1, \quad f(n) = n
+\]  
+
+Since, b is not greater then a, we cant use master method to find the complexity.
+
+\hrulefill
+\newpage
+
+
 
 
 \end{document}

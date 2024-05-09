@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1715255144 "/home/shinzuu/Documents/4thSem-Lectures-Materials/ALGO/Lecture/ALGO-latex.tex" "ALGO-latex.pdf" "ALGO-latex" 1715255145
+["pdflatex"] 1715257358 "/home/shinzuu/Documents/4thSem-Lectures-Materials/ALGO/Lecture/ALGO-latex.tex" "ALGO-latex.pdf" "ALGO-latex" 1715257358
   "/etc/texmf/web2c/texmf.cnf" 1713401235 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/shinzuu/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1714014884 11524 838fa1dedf47754953daa316b985973a ""
-  "/home/shinzuu/Documents/4thSem-Lectures-Materials/ALGO/Lecture/ALGO-latex.tex" 1715255144 10609 cf28e5f69ae084a193856dd052e4df66 ""
+  "/home/shinzuu/Documents/4thSem-Lectures-Materials/ALGO/Lecture/ALGO-latex.tex" 1715257358 11841 d45ef478c433cd6fc4dbdd0652f2bbe5 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -35,6 +35,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1248133631 31099 c85edf1dd5b9e826d67c9c7293b6786c ""
@@ -67,8 +68,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1713401239 75955 f78456fd1308dc295dc476a68e28d85b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1713401241 1405649 dd4284646a5ce79fddded0900179bf1a ""
-  "ALGO-latex.aux" 1715255145 32 1b174032087fb90900fa6203d3bb0a7e "pdflatex"
-  "ALGO-latex.tex" 1715255144 10609 cf28e5f69ae084a193856dd052e4df66 ""
+  "ALGO-latex.aux" 1715257358 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
+  "ALGO-latex.tex" 1715257358 11841 d45ef478c433cd6fc4dbdd0652f2bbe5 ""
   (generated)
   "ALGO-latex.aux"
   "ALGO-latex.log"
