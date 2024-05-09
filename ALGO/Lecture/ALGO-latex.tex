@@ -269,5 +269,60 @@ Master method:
 
 \textbf{Examples:}
 
+$EQ^n:$
+\[
+    T(n) = 
+    \begin{cases}
+        t(n-1) + n & \text{, } n > 1 \\
+        1 & \text{, } n \leq 1
+    \end{cases}
+\]
+
+$Sol^n:$
+We have,
+\begin{equation}
+    T(n) = t(n-1) + n \quad \text{---(1)}
+\end{equation}
+
+Replace \( n \) by \( n-1 \) in equation (1):
+\begin{equation}
+    T(n-1) = t(n-2) + (n-1) \quad \text{---(2)}
+\end{equation}
+
+Putting equation (2) in equation (1) we get,
+\begin{equation}
+    T(n) = t(n-2) + (n-1) + n \quad \text{---(3)}
+\end{equation}
+
+Similarly, replacing \( n \) by \( n-2 \) in equation (1) we get,
+\begin{equation}
+    T(n-2) = t(n-3) + (n-2) \quad \text{---(4)}
+\end{equation}
+
+Putting equation (4) in equation (3) we get,
+\begin{equation}
+    T(n) = t(n-3) + (n-2) + (n-1) + n \quad \text{---(5)}
+\end{equation}
+
+So, the general equation may be,
+\begin{equation}
+    T(n) = t(1) + 2 + 3 + \ldots + (n-2) + (n-1) + n \quad \text{---(6)}
+\end{equation}
+
+Given \( T(1) = 1 \) we get from  equation (6),
+\begin{align*}
+    T(n) & = t(1) + 2 + 3 + \ldots + (n-2) + (n-1) + n \\
+         & = 1 + 2 + 3 + \ldots + (n-2) + (n-1) + n \\
+         & = \frac{n(n+1)}{2} \\
+         & = \frac{n^2}{2} + \frac{n}{2}
+\end{align*}
+
+Here, \( n^2 \) is the time complexity. Thus, the answer is \( O(n^2) \).
+
+\hrulefill
+
+\newpage
+
+
 
 \end{document}
