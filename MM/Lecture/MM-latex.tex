@@ -5,7 +5,6 @@
 \usepackage{geometry}
 \usepackage{multicol}
 \usepackage{enumitem}
-\setlist{nosep} % Remove extra space in lists
 
 \title{Microprocessors and Micro controllers \\ CSE3815}
 \author{Fairuz Bilquis Khan}
@@ -220,8 +219,120 @@ There should be overview chart of difference between intel 4004 to pentium 4.
     \end{itemize}
 \end{itemize}
 
+\subsection*{Special-Purpose Registers:}
 
+\begin{itemize}
+    \item \textbf{RIP:} Addressable as RIP.
+    \begin{itemize}
+        \item RIP addresses the next instruction in a section of memory, defined as the instruction pointer in a code segment.
+    \end{itemize}
+    
+    \item \textbf{RSP:} Addressable as RSP.
+    \begin{itemize}
+        \item RSP addresses an area of memory called the stack. The stack pointer stores data through this pointer.
+    \end{itemize}
+    
+    \item \textbf{RFLAGS:} 
+    \begin{itemize}
+        \item RFLAGS indicate the condition of the microprocessor and control its operation. Flags are upward-compatible from the 8086/8088 through Core2. The rightmost five and the overflow flag are changed by most arithmetic and logic operations, although data transfers do not affect them. Flags never change for any data transfer or program control operation. Some of the flags are also used to control features found in the microprocessor.
+    \end{itemize}
+    
+    \item \textbf{Segment Registers:} Include CS, DS, ES, SS, FS, and GS.
+\end{itemize}
 
+\subsection*{List of Each Flag bit, with a brief description of function:}
+
+\begin{itemize}
+    \item \textbf{C (Carry):} Holds the carry after addition or borrow after subtraction. Also indicates error conditions.
+    
+    \item \textbf{P (Parity):} Is the count of ones in a number expressed as even or odd. Logic 0 for odd parity; logic 1 for even parity. If a number contains three binary one bits, it has odd parity; If a number contains no one bits, it has even parity.
+    
+    \item \textbf{A (Auxiliary Carry):} Holds the carry (half-carry) after addition or the borrow after subtraction between bit positions 3 and 4 of the result.
+    
+    \item \textbf{Z (Zero):} Shows that the result of an arithmetic or logic operation is zero.
+    
+    \item \textbf{S (Sign):} Flag holds the arithmetic sign of the result after an arithmetic or logic instruction executes.
+    
+    \item \textbf{T (Trap):} The trap flag enables trapping through an on-chip debugging feature.
+    
+    \item \textbf{I (Interrupt):} Controls operation of the INTR (interrupt request) input pin.
+    
+    \item \textbf{D (Direction):} Selects increment or decrement mode for the DI and/or SI registers.
+    
+    \item \textbf{O (Overflow):} Occurs when signed numbers are added or subtracted. An overflow indicates the result has exceeded the capacity of the machine.
+    
+    \item \textbf{IOPL (Input/Output Privilege Level):} Used in protected mode operation to select the privilege level for I/O devices.
+    
+    \item \textbf{NT (Nested Task):} Flag indicates the current task is nested within another task in protected mode operation.
+    
+    \item \textbf{RF (Resume):} Used with debugging to control resumption of execution after the next instruction.
+    
+    \item \textbf{VM (Virtual Mode):} Flag bit selects virtual mode operation in a protected mode system.
+    
+    \item \textbf{AC (Alignment Check):} Flag bit activates if a word or doubleword is addressed on a non-word or non-doubleword boundary.
+    
+    \item \textbf{VIF (Virtual Interrupt):} Is a copy of the interrupt flag bit available to the Pentium 4–(virtual interrupt).
+    
+    \item \textbf{VIP (Virtual Interrupt Pending):} Provides information about a virtual mode interrupt for Pentium. Used in multitasking environments to provide virtual interrupt flags.
+    
+    \item \textbf{ID (Identification):} Flag indicates that the Pentium microprocessors support the CPUID instruction. CPUID instruction provides the system with information about the Pentium microprocessor such as its version number and manufacturer.
+\end{itemize}
+
+\subsection*{Memory Addresses and Segment Registers}
+
+Generate memory addresses when combined with other registers in the microprocessor.
+
+\subsection*{Segment Registers:}
+Four or six segment registers in various versions of the microprocessor. A segment register functions differently in real mode than in protected mode. Following is a list of each segment register, along with its function in the system.
+
+\begin{itemize}
+    \item \textbf{CS (Code):} Holds code (programs and procedures) used by the microprocessor.
+    
+    \item \textbf{DS (Data):} Contains most data used by a program. Data are accessed by an offset address or contents of other registers that hold the offset address.
+    
+    \item \textbf{ES (Extra):} An additional data segment used by some instructions to hold destination data.
+    
+    \item \textbf{SS (Stack):} Defines the area of memory used for the stack. The stack entry point is determined by the stack segment and stack pointer registers. The BP register also addresses data within the stack segment.
+    
+    \item \textbf{FS and GS Segments:} Supplemental segment registers available in 80386–Core2 microprocessors. They allow two additional memory segments for access by programs. Windows uses these segments for internal operations, but no definition of their usage is available.
+\end{itemize}
+
+\section*{Real Mode Memory Addressing}
+
+80286 and above operate in either the real or protected mode. Real mode operation allows addressing of only the first 1M byte of memory space—even in Pentium 4 or Core2 microprocessor. The first 1M byte of memory is called the real memory, conventional memory, or DOS memory system.
+
+\newpage
+
+\subsection*{Segments and Offsets:}
+\begin{itemize}
+    \item All real mode memory addresses must consist of a segment address plus an offset address.
+    \item The segment address defines the beginning address of any 64K-byte memory segment.
+    \item The offset address selects any location within the 64K byte memory segment.
+    \end{itemize}
+\textbf{Memory address = (Segment Address * 10) + Offset}
+
+\begin{verbatim}
+    Once the beginning address is known, the ending address is found by adding FFFFH because
+        a real mode segment of memory is 64K in length. The offset address is always added 
+        to the segment starting address to locate the data. Segment and offset addresses 
+        are sometimes written as 1000:2000.
+
+    Suppose a segment address of 1000H and an offset of 246FH.
+    Now find the memory location:    
+\end{verbatim}
+
+\[
+\text{Memory location} = (\text{Segment Address} \times 10) + \text{Offset}
+\]
+\[
+= (1000 \times 10)_{\text{H}} + 246F_{\text{H}}
+\]
+\[
+= 10000_{\text{H}} + 246F_{\text{H}}
+\]
+\[
+= 1246F_{\text{H}}
+\]
 
 
 \end{document}
