@@ -4,6 +4,8 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{multicol}
+\usepackage{enumitem}
+\setlist{nosep} % Remove extra space in lists
 
 \title{Microprocessors and Micro controllers \\ CSE3815}
 \author{Fairuz Bilquis Khan}
@@ -137,11 +139,86 @@ There should be overview chart of difference between intel 4004 to pentium 4.
         resources.
 \end{verbatim}
 
+\subsection*{The programming Models:}
 
+\begin{verbatim}
+    8086 through Core2 registers are considered program-visible. While other registers
+        are considered program-invisible.
+        >> program-visible registers are used during programming while are directly
+            specified by the instructions.
+        >> program-invisible registers are not addressable directly during applications
+            programming. 
+    80286 and above contain program-invisible registers to control and operate protected
+        memory and other features of the microprocessor.
+    80386 through Core2 microprocessors contain full 32-bit internal architecture.
+    8086 through 80286 are fully upward compatible to the 80386 through Core2.
+\end{verbatim}
+\vspace*{20pt}
 
+\textbf{Intel Microprocessor Evolution:}\\
 
+\textbf{4004} $\rightarrow$ \textbf{8008} $\rightarrow$ \textbf{8080} $\rightarrow$ \textbf{8085} $\rightarrow$ \textbf{8086/8088} $\rightarrow$ \textbf{80286} $\rightarrow$ \textbf{80386} $\rightarrow$ \textbf{80486} $\rightarrow$ \textbf{Pentium} $\rightarrow$ \textbf{Pentium Pro} $\rightarrow$ \textbf{Pentium II} $\rightarrow$ \textbf{Pentium III} $\rightarrow$ \textbf{Pentium 4} $\rightarrow$ \textbf{Core} $\rightarrow$ \textbf{Core 2}
 
+\subsection*{Multipurpose Registers:}
+\begin{verbatim}
+    RAX is a versatile register with different sizes: 64-bit as RAX, 32-bit as 
+        REAX (accumulator), 16-bit as AX, or split into two 8-bit registers,
+        AH and AL.
+    EAX, known as the accumulator, handles math operations like multiplication
+        and division.
+    Intel aims to extend the address bus to 52 bits, allowing access to 4 petabytes
+        (4P) of memory.
+\end{verbatim}
 
+\newpage
+\subsection*{Address Space(Main Memory: RAM):}
+
+\begin{itemize}
+    \item With a 16-bit address bus, it can access 64 kilobytes of memory.
+    \item Expanding to a 20-bit address bus allows access to 1 megabyte.
+    \item A 32-bit address bus extends access to 4 gigabytes.
+    \item Progressing to a 34-bit address bus increases the capacity to 16 gigabytes.
+    \item A 36-bit address bus reaches 64 gigabytes.
+    \item Expanding further to a 38-bit address bus accesses 256 gigabytes.
+    \item Intel's plan for a 52-bit address bus would enable access to a massive 1015 bytes of memory.
+\end{itemize}
+
+\begin{itemize}
+    \item \textbf{RBX:} Addressable as RBX, EBX, BX, BH, BL.
+    \begin{itemize}
+        \item RBX register (base index) sometimes holds the offset address of a location in the memory system in all versions of the microprocessor.
+    \end{itemize}
+    
+    \item \textbf{RCX:} Addressable as RCX, ECX, CX, CH, or CL.
+    \begin{itemize}
+        \item RCX, a (count) general-purpose register, also holds the count for various instructions.
+    \end{itemize}
+    
+    \item \textbf{RDX:} Addressable as RDX, EDX, DX, DH, or DL.
+    \begin{itemize}
+        \item RDX, a (data) general-purpose register, holds a part of the result from a multiplication or part of the dividend before a division.
+    \end{itemize}
+    
+    \item \textbf{RBP:} Addressable as RBP, EBP, or BP.
+    \begin{itemize}
+        \item RBP points to a memory (base pointer) location for memory data transfers.
+    \end{itemize}
+    
+    \item \textbf{RDI:} Addressable as RDI, EDI, or DI.
+    \begin{itemize}
+        \item RDI often addresses the destination index string destination data for the string instructions.
+    \end{itemize}
+    
+    \item \textbf{RSI:} Addressable as RSI, ESI, or SI.
+    \begin{itemize}
+        \item RSI, the source index register, addresses source string data for the string instructions. Like RDI, RSI also functions as a general-purpose register.
+    \end{itemize}
+    
+    \item \textbf{R8 - R15:} Found in the Pentium 4 and Core2 if 64-bit extensions are enabled.
+    \begin{itemize}
+        \item Data are addressed as 64-, 32-, 16-, or 8-bit sizes and are of general-purpose.
+    \end{itemize}
+\end{itemize}
 
 
 
