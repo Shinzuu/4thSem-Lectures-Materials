@@ -667,36 +667,47 @@ For $\lambda = 4$, we get from $(A-\lambda I)v = 0$:
     &\text{} \quad 
     \sim\begin{bmatrix}
         -3 & -3 & 3 |0\\
-        0 & -6 & 0  |0\\
-        0 & 0 & 0  |0\\
+        0 & -12 & 6  |0\\
+        0 & -12 & 6  |0\\
     \end{bmatrix}
     \begin{bmatrix}
         r_2' = r_2 + r_1\\
-        r_3' = r_3 - 2r_1\\
+        r_3' = r_3 + 2r_1\\
     \end{bmatrix}
-    = 0
+    \\
+    &\text{} \quad 
+    \sim\begin{bmatrix}
+        -3 & -3 & 3 |0\\
+        0 & -12 & 6  |0\\
+        0 & 0 & 0  |0\\
+    \end{bmatrix}
+    \begin{bmatrix}
+        r_3" = r_3' - r_2'\\
+    \end{bmatrix}   
 \end{align*}
 
 From the second row, we get:
 
-\[ -6x_2 = 0 \]
+\[ -12x_2 +6x_3 = 0 \]
 
-So, \( x_2 = 0 \).
+\[ 2x_2 = x_3  \]
+
 
 Now, from the first row:
 
 \[ -3x_1 - 3x_2 + 3x_3 = 0 \]
 
-\[ -3x_1 + 3x_3 = 0 \]
+\[ -x_1 - x_2 + 2x_2 = 0 \]
 
-\[ x_1 = x_3 \]
+\[ x_1 = x_2 \]
 
 \[ x_1 = c \]
 
 \begin{align*}
     \text{say, } \quad & \begin{aligned}[t]
         x_1 &= c &
-        x_2 &= 0
+        x_2 &= c &
+        x_3 &= 2c &
     \end{aligned}
 \end{align*}
 
@@ -708,30 +719,26 @@ Now, from the first row:
     \end{bmatrix}
     &= \begin{bmatrix}
         c \\
-        0 \\
         c \\
+        2c \\
     \end{bmatrix}
     = c\begin{bmatrix}
         1 \\
-        0 \\
         1 \\
+        2 \\
     \end{bmatrix}
 \end{align*}
 
 Thus, we get \( V_1 = 
 \begin{bmatrix}
     1 \\
-    0 \\
     1 \\
-\end{bmatrix} \)
-and \( V_2 = \begin{bmatrix}
-    1 \\ 
-    0 \\ 
-    1 \\
+    2 \\
 \end{bmatrix} \)
 
-$\delta$ Find the eigenvalues and eigenvectors of \(A = \begin{bmatrix} 3 & 2 & 4 \\ 2 & 0 & 2 \\ 4 & 2 & 3 \end{bmatrix}\)
 \newpage
+
+$\delta$ Find the eigenvalues and eigenvectors of \(A = \begin{bmatrix} 3 & 2 & 4 \\ 2 & 0 & 2 \\ 4 & 2 & 3 \end{bmatrix}\)
 \section*{System of Equation}
 
 \begin{align*}
