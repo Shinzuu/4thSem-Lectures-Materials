@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1715437313.06904 "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MM/Lecture/MM-latex.tex" "MM-latex.pdf" "MM-latex" 1715437313.45455 0
-  "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MM/Lecture/MM-latex.tex" 1715437312.64119 15981 06a6f9a0970b34d23674fba943dff272 ""
+["pdflatex"] 1715486906.4297 "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MM/Lecture/MM-latex.tex" "MM-latex.pdf" "MM-latex" 1715486907.90734 0
+  "/home/shinzuu/Repositories/4thSem-Lectures-Materials/MM/Lecture/MM-latex.tex" 1715486905.97963 15981 421b6e21db8d2bdf7ede17a75c1d095a ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tctt1000.tfm" 1136768653 1536 c5729d01ab121276cf99b309129349a0 ""
@@ -67,8 +67,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1706659200 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1714712600.96618 284220 1854b4a2d41da6477c3a764c32f15146 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1714714823 6446972 e33aeef3c8cc54dfe1bf4f90dc238553 ""
-  "MM-latex.aux" 1715437313.3412 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
-  "MM-latex.tex" 1715437312.64119 15981 06a6f9a0970b34d23674fba943dff272 ""
+  "MM-latex.aux" 1715486907.52065 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
+  "MM-latex.tex" 1715486905.97963 15981 421b6e21db8d2bdf7ede17a75c1d095a ""
   (generated)
   "MM-latex.aux"
   "MM-latex.log"
