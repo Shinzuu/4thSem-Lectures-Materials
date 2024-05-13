@@ -39,15 +39,20 @@ typedef unsigned long int uint32;
 typedef long long int int64;
 typedef unsigned long long int  uint64;
 
+void Swap(int &x, int &y){
+    int temp = x;
+    x = y;
+    y = temp;
+}
 int Partition(int arr[], int left, int right){
     int pivot = arr[right], i = left;
     for(int j = left; j < right; j++){
         if(arr[j] < pivot){
-            swap(arr[i], arr[j]);
+            Swap(arr[i], arr[j]);
             i++;
         }
     }
-    swap(arr[i], arr[right]);
+    Swap(arr[i], arr[right]);
     return i;
 }
 
