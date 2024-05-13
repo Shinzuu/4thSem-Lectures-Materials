@@ -1,0 +1,36 @@
+insert data into table:
+student >> INSERT INTO Student VALUE (1, 'James', 'Ann', '2000-1-1', 'james@ann.com', '+880123123'); 
+enrollment >> INSERT INTO Enrollment VALUE (1001, 1, 20, '4th', 42);
+class >> INSERT INTO Class VALUE (11, 20, 90, '4th', 42);
+department >> INSERT INTO Department VALUE (20, 'CSE'); 
+course >> INSERT INTO Course VALUE (20, 'PF', 120); 
+faculty >> INSERT INTO Faculty VALUE (990, 'John', 'Doe', 120, 'john@doe.com', '+9999991'); 
+
+Q2 query
+CREATE VIEW Q2_view AS
+SELECT CONCAT(Student.first_name, ' ', Student.last_name) AS name, Student.email , Course.course_name AS Course
+FROM Student
+JOIN Enrollment ON Student.student_id = Enrollment.student_id
+JOIN Course ON Enrollment.course_id = Course.course_id
+WHERE LENGTH(Course.course_name) = 3;
+
+Q3
+CREATE VIEW Q3_view AS
+SELECT CONCAT(Student.first_name, ' ', Student.last_name) AS name, 
+       COUNT(Enrollment.course_id) AS courses
+FROM Student
+JOIN Enrollment ON Student.student_id = Enrollment.student_id
+GROUP BY Student.student_id, Student.first_name, Student.last_name
+HAVING COUNT(Enrollment.course_id) > 5;
+
+
+Q4
+CREATE VIEW Q4_view AS
+SELECT CONCAT(Faculty.first_name, ' ', Faculty.last_name) AS name, COUNT(Faculty.department_id WHERE Department.department_id = 'EEE') AS courses
+FROM Faculty
+JOIN Faculty ON Faculty.department_id = Department.department_id
+GROUP BY Faculty.faculty_id
+HAVING LENGTH(Faculty.department_id) > 1;
+
+Q5
+SELECT DATEADD(day, 14, '2001-01-01') AS FifteenthDay;
