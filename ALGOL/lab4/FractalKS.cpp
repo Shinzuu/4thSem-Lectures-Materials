@@ -48,18 +48,29 @@ double fractionalKnapsack(vector<double>& profit, vector<double>& weights, doubl
 
     cout << "Items Used Table:" << endl;
     cout << "Item\tUsed" << endl;
-    for (int i = 0; i < n; ++i) {
-        if(used[objects[i].index] > 0.0){
-            cout << objects[i].index + 1 << "\t";
 
-        if (used[objects[i].index] == 1.0) {
-            cout << "1" << endl;
-        } else {
-            cout << fixed << setprecision(2) << used[objects[i].index] << endl;
-        }
+    // Sort used vector by item index
+    vector<pair<int, double>> sorted_used;
+    for (int i = 0; i < n; ++i) {
+        if (used[i] > 0.0) {
+            sorted_used.push_back({i, used[i]});
         }
     }
-    cout << "Maximum value: " ;
+    sort(sorted_used.begin(), sorted_used.end());
+
+    // Output the sorted table
+    for (auto& pair : sorted_used) {
+        int index = pair.first;
+        double usedAmount = pair.second;
+        cout << index + 1 << "\t";
+        if (usedAmount == 1.0) {
+            cout << "1" << endl;
+        } else {
+            cout << fixed << setprecision(2) << usedAmount << endl;
+        }
+    }
+
+    cout << "Maximum value: ";
     return maxProfit;
 }
 
@@ -84,3 +95,4 @@ int main() {
     cout << fixed << setprecision(2) << fractionalKnapsack(profit, weights, capacity, n) << endl;
     return 0;
 }
+
