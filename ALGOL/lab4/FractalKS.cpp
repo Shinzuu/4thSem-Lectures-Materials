@@ -33,12 +33,11 @@ double fractionalKnapsack(vector<double>& profit, vector<double>& weights, doubl
             maxProfit += objects[i].profit;
             capacity -= objects[i].weight;
         } else {
-            // Calculate profit fractionally for the remaining capacity
             maxProfit += (capacity * objects[i].ratio);
             break;
         }
     }
-
+    
     return maxProfit;
 }
 
