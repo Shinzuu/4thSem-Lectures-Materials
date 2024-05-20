@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <iomanip>
 using namespace std;
 
 struct Object {
@@ -54,10 +55,10 @@ double fractionalKnapsack(vector<double>& profit, vector<double>& weights, doubl
         if (used[objects[i].index] == 1.0) {
             cout << "1" << endl;
         } else {
-            cout << used[objects[i].index] << endl;
+            cout << fixed << setprecision(2) << used[objects[i].index] << endl;
         }
     }
-
+    cout << "Maximum value: " ;
     return maxProfit;
 }
 
@@ -71,20 +72,14 @@ int main() {
     vector<double> profit(n);
     vector<double> weights(n);
 
-    cout << "Enter the profit each object:" << endl;
+    cout << "Enter the profit each object and weight:" << endl;
     for (int i = 0; i < n; i++) {
-        cin >> profit[i];
-    }
-
-    cout << "Enter the weight of each object:" << endl;
-    for (int i = 0; i < n; i++) {
-        cin >> weights[i];
+        cin >> profit[i] >> weights[i];
     }
 
     cout << "Enter the capacity of the knapsack: ";
     cin >> capacity;
 
-    cout << fixed << "Maximum value: " << fractionalKnapsack(profit, weights, capacity, n) << endl;
-
+    cout << fixed << setprecision(2) << fractionalKnapsack(profit, weights, capacity, n) << endl;
     return 0;
 }
