@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.9)  15 MAY 2024 19:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.5.9)  15 MAY 2024 23:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -107,7 +107,17 @@ File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count271
 \l__pdf_internal_box=\box52
-) (./MLD-latex.aux)
+) (./MLD-latex.aux
+
+LaTeX Warning: Label `fig:example' multiply defined.
+
+
+LaTeX Warning: Label `fig:example' multiply defined.
+
+
+LaTeX Warning: Label `fig:example' multiply defined.
+
+)
 \openout1 = `MLD-latex.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -200,14 +210,4 @@ Overfull \hbox (69.00052pt too wide) in paragraph at lines 222--224
  [][] 
  []
 
-[7 <../Asset/invHWB.png>] [8 <../Asset/invHWC.png>] [9] [10] [11]
-Overfull \hbox (85.83229pt too wide) detected at line 521
-[]
- []
-
-
-Overfull \hbox (75.79893pt too wide) detected at line 529
-[]
- []
-
-[12
+[7 <../Asset/invHWB.png>] [8 <../Ass
