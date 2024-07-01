@@ -59,3 +59,12 @@ int main()
     knapSack(W, wt, val, n);
     return 0;
 }
+
+// report on this
+//with example
+// tables and code 
+//  objective , decision ,code, visuals
+//maximum output and used objects
+// description,middle code explanation section by section, last full code
+
+// everything hand written except code 
