@@ -87,3 +87,7 @@ int main()
 
     return 0;
 }
+
+
+
+// report on this , input output code explanation  
