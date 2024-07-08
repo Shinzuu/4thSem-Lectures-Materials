@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "archioture"
-    ]
+    ],
+    "files.associations": {
+        "ostream": "cpp"
+    }
 }
