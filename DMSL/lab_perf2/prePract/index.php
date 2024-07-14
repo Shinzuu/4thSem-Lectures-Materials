@@ -54,7 +54,19 @@
             </div>
 
         </section>
-
+        <section class="container" style="padding: 20px; border: 3px dotted red;" >
+            <h5>Create Course</h5>
+            <form action="create_course.php" method="post">
+                <div class="mb-3"></div>
+                    <label for="course_name" class="form-label">Course Name</label>
+                    <input type="text" class="form-control" name="course_name" id="course_name" aria-describedby="helpId" placeholder="Course Name" required />
+                </div>
+                <div class="mb-3">
+                    <label for="course_code" class="form-label">Course Code</label>
+                    <input type="text" class="form-control" name="course_code" id="course_code" aria-describedby="emailHelpId" placeholder="Course Code" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+        </section>
     </main>
     <footer>
         <!-- place footer here -->
