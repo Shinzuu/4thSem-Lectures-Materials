@@ -66,6 +66,22 @@
                     <input type="text" class="form-control" name="course_code" id="course_code" aria-describedby="emailHelpId" placeholder="Course Code" required />
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
+        <section class="container" style="padding: 20px; border: 3px dotted blue;">
+            <h5>Update Student Email</h5>
+
+            <form action="update_student_email.php" method="post">
+                <div class="mb-3">
+                    <label for="student_id" class="form-label">Student ID</label>
+                    <input type="text" class="form-control" name="student_id" id="student_id" aria-describedby="helpId" placeholder="Student ID" required />
+                </div>
+                <div class="mb-3">
+                    <label for="new_email" class="form-label">New Email</label>
+                    <input type="email" class="form-control" name="new_email" id="new_email" aria-describedby="emailHelpId" placeholder="New Email" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </section>
     </main>
     <footer>
