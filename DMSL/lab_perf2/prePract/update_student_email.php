@@ -16,7 +16,6 @@
         $sql = "UPDATE students SET email = '$new_email' WHERE student_id = '$student_id'";
 
         if ($conn->query($sql) === TRUE) {
-            echo "Record updated successfully";
             header("Location: index.php");
             exit();
         } else {

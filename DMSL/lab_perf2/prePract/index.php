@@ -83,6 +83,17 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
+        <section class="container" style="padding: 20px; border: 3px dotted green;">
+            <h5>Delete Student Record</h5>
+
+            <form action="delete_student.php" method="post">
+                <div class="mb-3">
+                    <label for="student_id" class="form-label">Student ID</label>
+                    <input type="text" class="form-control" name="student_id" id="student_id" aria-describedby="helpId" placeholder="Student ID" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </section>
     </main>
     <footer>
         <!-- place footer here -->
