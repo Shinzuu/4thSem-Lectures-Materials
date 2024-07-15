@@ -54,12 +54,12 @@
             </div>
 
         </section>
-        <section class="container" style="padding: 20px; border: 3px dotted red;" >
+        <section class="container" style="padding: 20px; border: 3px dotted red;">
             <h5>Create Course</h5>
             <form action="create_course.php" method="post">
                 <div class="mb-3"></div>
-                    <label for="course_name" class="form-label">Course Name</label>
-                    <input type="text" class="form-control" name="course_name" id="course_name" aria-describedby="helpId" placeholder="Course Name" required />
+                <label for="course_name" class="form-label">Course Name</label>
+                <input type="text" class="form-control" name="course_name" id="course_name" aria-describedby="helpId" placeholder="Course Name" required />
                 </div>
                 <div class="mb-3">
                     <label for="course_code" class="form-label">Course Code</label>
@@ -93,6 +93,33 @@
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+        </section>
+        <section class="container" style="padding: 20px; border: 3px dotted purple;">
+            <h5>Read Student courses == not working need to add sessions, if i wanna pipe output to table </h5>
+
+            <form action="read_student_courses.php" method="post">
+                <div class="mb-3">
+                    <label for="student_id" class="form-label">Student ID</label>
+                    <input type="text" class="form-control" name="student_id" id="student_id" aria-describedby="helpId" placeholder="Student ID" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <h5>List of courses</h5>
+
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">Course ID</th>
+                            <th scope="col">Course Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student_course_row">
+                        <!-- Table row via dynamic PHP -->
+                        
+                    </tbody>
+                </table>
+            </div>
         </section>
     </main>
     <footer>
